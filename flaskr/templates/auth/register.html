@@ -1,19 +1,15 @@
-{% extends 'base.html' %}
-
-{% block header %}
-  <h1>{% block title %}Registrarme{% endblock %}</h1>
-{% endblock %}
-
-{% block content %}
-  <form method="post">
-    <label for="username">Nombre de usuario</label>
-    <input name="username" id="username" required> 
-    <label for="email">Correo electronico </label>
-    <input name="email" id="email" required>
-    <label for="password">contraseña</label>
-    <input type="password" name="password" id="password" required>
-    <label for="Verif_password">Verificar contraseña</label>
-    <input type="password" name="verif_password" id="verif_password" required>  
-    <input type="submit" value="Registrarme">
-  </form>
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}Registrarme{% endblock %}</h1>
+{% endblock %} {% block content %}
+<form method="post">
+  <label for="username">Nombre de usuario</label>
+  <input name="username" id="username" required />
+  <label for="email">Correo electronico </label>
+  <input name="email" id="email" required />
+  <label for="password">Contraseña</label>
+  <input type="password" name="password" id="password" required />
+  <label for="verif_password">Verificar contraseña</label>
+  <input type="password" name="verif_password" id="verif_password" required />
+  <input type="submit" value="Registrarme" />
+</form>
 {% endblock %}

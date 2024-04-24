@@ -15,6 +15,7 @@ def register():
         username = request.form['username']
         password = request.form['password']
         verif_password = request.form['verif_password']
+        email = request.form['email']
         db = get_db()
         error = None
 
@@ -24,6 +25,9 @@ def register():
             error = 'Password is required.'
         elif not verif_password:
              verif_password != password  
+             error = 'verif_password is different.'
+        elif not email:
+            error = 'email is required.'
 
 
         if error is None:
@@ -47,6 +51,8 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        verif_password = request.form['verif_password']
+        email = request.form['email']
         db = get_db()
         error = None
         user = db.execute(
